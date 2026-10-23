@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets
+.env
+.env.*
+
+# Local runtime data and databases
+data/sessions/
+data/*.db
+chat_history.json
+chroma_db/
+**/chroma_db/
+
+# Uploaded/private documents
+*.pdf
+*.docx
+
+# IDE / OS
+.vscode/
+.DS_Store
