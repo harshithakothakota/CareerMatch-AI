@@ -12,14 +12,14 @@ CareerMatch AI is a local resume and job-description assistant built with Stream
 
 ## Requirements
 
-- Python 3.10 or newer (the project was developed with Python 3.12).
+- Python 3.10 or newer (developed with Python 3.12).
 - Git.
 - Ollama installed locally.
 - The `llama3.2:1b` Ollama model.
 
 ## Setup (Windows PowerShell)
 
-1. Install Ollama from https://ollama.com/download.
+1. Install Ollama from [ollama.com/download](https://ollama.com/download).
 2. Download the model:
 
    ```powershell
@@ -46,20 +46,22 @@ CareerMatch AI is a local resume and job-description assistant built with Stream
    streamlit run app.py
    ```
 
-6. Open the local URL shown by Streamlit, upload a resume and job description PDF, then try Ask AI, Skill Gap, and Interview Prep.
+6. Open the local URL shown by Streamlit, upload a resume and job-description PDF, then try **Ask AI**, **Skill Gap**, and **Interview Prep**.
 
-## Data and privacy
+## Data and Privacy
 
-Uploaded PDFs, session history, and the local Chroma index may be stored under `data/` or other local runtime folders. These are excluded from the GitHub-ready source package. Do not commit private resumes, job descriptions, `.env` files, database files, virtual environments, or local vector indexes.
+Uploaded PDFs, session history, and the local Chroma index may be stored under `data/` or other local runtime folders. These should remain local and must not be committed to GitHub.
 
-## Current limitations
+Do not commit private resumes, job descriptions, `.env` files, database files, virtual environments, or local vector indexes.
+
+## Current Limitations
 
 - The app currently accepts PDF uploads.
 - AI-generated analysis can make mistakes. Verify extracted facts and skill-gap results against the original documents before relying on them.
 - The local Ollama model must be installed and running.
 - Dependency versions are not pinned yet; pin tested versions before a production deployment.
 
-## Project structure
+## Project Structure
 
 ```text
 CareerMatch-AI/
@@ -68,6 +70,7 @@ CareerMatch-AI/
 ├── README.md
 ├── .gitignore
 └── src/
+    ├── __init__.py
     ├── chunking.py
     ├── document_loader.py
     ├── embeddings.py
